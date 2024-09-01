@@ -1,0 +1,16 @@
+.editor {
+    width: 60%;
+    height: 100vh;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    outline: none;
+    margin: auto;
+    position: relative;
+    top: 10%;
+    padding: 8%;
+}
