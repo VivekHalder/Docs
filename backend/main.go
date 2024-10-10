@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/VivekHalder/TryingDocs/database"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/websocket"
 )
@@ -94,6 +95,10 @@ func HandleConnection(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
+	database.InitDB()
+	defer database.CloseDB()
+
 	fmt.Println("Server started!")
 	r := mux.NewRouter()
 	r.HandleFunc("/ws", HandleConnection)
